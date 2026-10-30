@@ -1,0 +1,9 @@
+project: savantenvs/percona-server
+target: fuzz_mysql_protocol_stmt_close
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_mysql_protocol_stmt_close/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mysql_protocol_stmt_close
+    libfuzzer: true
+    timeout: 5

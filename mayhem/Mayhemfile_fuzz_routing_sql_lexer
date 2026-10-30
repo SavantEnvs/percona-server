@@ -1,0 +1,9 @@
+project: savantenvs/percona-server
+target: fuzz_routing_sql_lexer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_routing_sql_lexer/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_routing_sql_lexer
+    libfuzzer: true
+    timeout: 5
