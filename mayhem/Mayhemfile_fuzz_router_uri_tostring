@@ -1,0 +1,9 @@
+project: savantenvs/percona-server
+target: fuzz_router_uri_tostring
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_router_uri_tostring/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_router_uri_tostring
+    libfuzzer: true
+    timeout: 5
